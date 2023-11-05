@@ -3,8 +3,8 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
 from random import randint 
 
-app = QApplication([])#
-win = QWidget()#
+app = QApplication([])#створеня програми
+win = QWidget()#створеня вікна
 win.setWindowTitle("Визначник переможця")# надавання назви програмі
 win.resize(700, 500)# розміри вікна програми
 win.move(500, 150)# розміщення вікна програми
@@ -21,9 +21,9 @@ line.addWidget(gener, alignment = Qt.AlignCenter)#додавання кнопк�
 win.setLayout(line)#
 
 def funk():
-    num = randint(1, 100)#надавання значення змінній
-    text1.setText("Переможець")#надавання значення змінній
-    text2.setText(str(num))#надавання значення змінній 
+    num = randint(1, 100)
+    text1.setText("Переможець")
+    text2.setText(str(num))
 
 gener.clicked.connect(funk)# викликання функції
 
